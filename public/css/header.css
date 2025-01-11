@@ -1,0 +1,10 @@
+.header{
+    width: 100vw;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: wheat;
+    text-align: center;
+    vertical-align: center;
+}
