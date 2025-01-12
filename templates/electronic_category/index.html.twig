@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ElectronicCategory index{% endblock %}
+
+{% block body %}
+    <div class="container col-md-8">
+        <h1>ElectronicCategory index</h1>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>TitleEng</th>
+                <th>TitleUa</th>
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for electronic_category in electronic_categories %}
+                <tr>
+                    <td>{{ electronic_category.id }}</td>
+                    <td>{{ electronic_category.TitleEng }}</td>
+                    <td>{{ electronic_category.TitleUa }}</td>
+                    <td>
+                        <a href="{{ path('app_electronic_category_show', {'id': electronic_category.id}) }}">show</a>
+                        <a href="{{ path('app_electronic_category_edit', {'id': electronic_category.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ path('app_electronic_category_new') }}">Create new</a>
+    </div>
+{% endblock %}

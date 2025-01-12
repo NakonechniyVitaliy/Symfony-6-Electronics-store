@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Country;
+use App\Entity\ElectronicCategory;
 use App\Entity\Manufacturer;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
@@ -20,6 +21,12 @@ class ManufacturerType extends AbstractType
                 'class' => Country::class,
                 'choice_label' => 'title',
                 'required' => true
+            ])
+            ->add('electronicCategories', EntityType::class,[
+                'class' => ElectronicCategory::class,
+                'choice_label' => 'titleEng',
+                'required' => true,
+                'multiple' => true,
             ])
         ;
     }
