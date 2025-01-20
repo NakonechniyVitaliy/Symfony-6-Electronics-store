@@ -15,9 +15,48 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
+    <style>
+        .header{
+            width: 100vw;
+            height: 80px;
+            top: 0;
+            left: 0;
+            background: wheat;
+            margin: 0;
+        }
+        .header-items{
+            height: 100%;
+            background: lime;
+            display: flex;
+            width: 90vw;
+            margin: auto;
+        }
+        .flex-tab{
+            height: 75px;
+            background: hotpink;
+            margin: 2.5px 10px 10px 2.5px;
+            align-items: center;
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        .flex-logo{
+            height: 75px;
+            margin: 2.5px 10px 10px 2.5px;
+            flex-grow: 3;
+            background: red;
+        }
+    </style>
 
     <header class="header">
-        ITS HEADER
+        <div class="header-items">
+            <div class="flex-logo">LOGO</div>
+            <div class="flex-tab">Main</div>
+            <div class="flex-tab">Manufacturer</div>
+            <div class="flex-tab">Country</div>
+            <div class="flex-tab">Category</div>
+            <div class="flex-tab">Catalog</div>
+        </div>
     </header>
 
     <body>
@@ -28,4 +67,5 @@
     <footer class="footer">
             ITS FOOTER
     </footer>
+
 </html>
