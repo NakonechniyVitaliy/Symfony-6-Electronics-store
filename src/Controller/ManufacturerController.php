@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\Manufacturer;
+use App\Filter\ManufacturerFilter;
+use App\Form\ManufacturerFilterType;
 use App\Form\ManufacturerType;
 use App\Repository\ManufacturerRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -10,15 +12,27 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use function PHPUnit\Framework\exactly;
 
 #[Route('/manufacturer')]
 final class ManufacturerController extends AbstractController
 {
     #[Route(name: 'app_manufacturer_index', methods: ['GET'])]
-    public function index(ManufacturerRepository $manufacturerRepository): Response
+    public function index(Request $request, ManufacturerRepository $manufacturerRepository): Response
     {
+        $manufacturerFilter = new ManufacturerFilter();
+        $form = $this->createForm(ManufacturerFilterType::class, $manufacturerFilter);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $manufacturers = $manufacturerRepository->findByFilter($form->getData()->getTitle());
+        } else {
+            $manufacturers = $manufacturerRepository->findAll();
+        }
+
         return $this->render('manufacturer/index.html.twig', [
-            'manufacturers' => $manufacturerRepository->findAll(),
+            'manufacturers' => $manufacturers,
+            'searchForm' => $form->createView(),
         ]);
     }
 
