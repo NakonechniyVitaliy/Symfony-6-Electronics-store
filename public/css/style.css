@@ -5,3 +5,15 @@
 .col-md-3-input{
     width: 10vw;
 }
+
+.body-main-div{
+    min-height: 75vh;
+    max-width: 100vw;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: white!important;
+    overflow: hidden;
+}
