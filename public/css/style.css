@@ -15,5 +15,35 @@ html, body {
     margin: 0;
     padding: 0;
     background: white!important;
-    overflow: hidden;
+    overflow-x:hidden;
+}
+
+.classic-btn{
+    background: #ff8c00;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    padding: 5px 14px 5px 14px;
+    text-decoration: none;
+}
+
+.classic-btn:hover{
+    background: white;
+    color: #ff8c00;
+    border: 1px solid #ff8c00;
+}
+
+.classic-btn-second{
+    background: white;
+    border-radius: 5px;
+    border: 1px black solid;
+    color: black;
+    padding: 5px 14px 5px 14px;
+    text-decoration: none;
+}
+
+.classic-btn-second:hover{
+    background: #ff8c00;
+    color: white;
+    border: none;
 }

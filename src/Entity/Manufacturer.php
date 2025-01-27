@@ -27,6 +27,11 @@ class Manufacturer
     #[ORM\ManyToMany(targetEntity: ElectronicCategory::class)]
     private Collection $electronicCategories;
 
+    public function __toString(): string
+        {
+        return $this->title;
+        }
+
     public function getCountry(): Country
     {
         return $this->country;

@@ -6,7 +6,7 @@
     <div class="container">
         {{ form_start(searchForm) }}
         {{ form_widget(searchForm) }}
-        <button class="btn btn-info">{{ button_label|default('Find') }}</button>
+        <button class="classic-btn">{{ button_label|default('Find') }}</button>
         {{ form_end(searchForm) }}
     </div>
 
@@ -28,8 +28,8 @@
                     <td>{{ manufacturer.title }}</td>
                     <td>{{ manufacturer.country }}</td>
                     <td>
-                        <a href="{{ path('app_manufacturer_show', {'id': manufacturer.id}) }}">show</a>
-                        <a href="{{ path('app_manufacturer_edit', {'id': manufacturer.id}) }}">edit</a>
+                        <a class="classic-btn-second" href="{{ path('app_manufacturer_show', {'id': manufacturer.id}) }}">show</a>
+                        <a class="classic-btn" href="{{ path('app_manufacturer_edit', {'id': manufacturer.id}) }}">edit</a>
                     </td>
                 </tr>
             {% else %}
@@ -40,6 +40,6 @@
             </tbody>
         </table>
 
-        <a href="{{ path('app_manufacturer_new') }}" class="btn btn-success">Create new</a>
+        <a href="{{ path('app_manufacturer_new') }}" class="classic-btn">Create new</a>
     </div>
 {% endblock %}

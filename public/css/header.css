@@ -30,14 +30,20 @@
     font-weight: 475;
 }
 
-.flex-tab:hover{
-    color: #ff8c00;
-    font-weight: 525;
-
+.flex-tab a{
+    text-decoration: none;
+    color: black;
 }
+
+.flex-tab a:hover{
+    color: #ff8c00;
+    cursor: pointer;
+}
+
 
 .flex-logo{
     height: 75px;
     margin: 2.5px 10px 10px 2.5px;
     flex-grow: 3;
 }
+

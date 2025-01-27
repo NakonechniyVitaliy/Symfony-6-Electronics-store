@@ -15,17 +15,8 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <header class="header">
-        <div class="header-items">
-            <div class="flex-logo background-logo-div"></div>
-            <div class="flex-tab"></div>
-            <div class="flex-tab">MAIN</div>
-            <div class="flex-tab">MANUFACTURER</div>
-            <div class="flex-tab">COUNTRY</div>
-            <div class="flex-tab">CATEGORY</div>
-            <div class="flex-tab">CATALOG</div>
-        </div>
-    </header>
+
+    {% include 'modules/header.html.twig' %}
 
     <body>
         <div class="body-main-div">
@@ -34,16 +25,6 @@
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     </body>
 
-    <footer class="footer">
-        <div class="footer-items">
-            <div class="footer-section about-company">
-                <p>The company ElectroHub has been selling electronics worldwide since 2025.<br>
-                We cooperate with such famous brands as Apple, Samsung, Xiomi.</p>
-            </div>
-            <div class="footer-section"></div>
-            <div class="footer-section">gigi74747474@gmail.com</div>
-        </div>
-        <div class="footer-copyright">ELECTROHUB© 2025</div>
-    </footer>
+    {% include 'modules/footer.html.twig' %}
 
 </html>
