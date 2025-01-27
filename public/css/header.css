@@ -1,16 +1,49 @@
-html, body {
-    margin: 0;
-    padding: 0;
+.background-logo-div{
+    background: url('../img/clear-logo.png');
+    background-position: center; /* Центрирует изображение внутри div */
+    background-repeat: no-repeat; /* Отключает повтор изображения */
+    background-size: contain;
 }
 
 .header{
     width: 100vw;
-    height: 100px;
+    height: 80px;
     top: 0;
     left: 0;
-    background: wheat;
-    text-align: center;
-    vertical-align: center;
-    display: block;
     margin: 0;
+    background: white;
 }
+.header-items{
+    height: 100%;
+    display: flex;
+    width: 90vw;
+    margin: auto;
+}
+.flex-tab{
+    height: 75px;
+    margin: 2.5px 10px 10px 2.5px;
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    color: black;
+    font-weight: 475;
+}
+
+.flex-tab a{
+    text-decoration: none;
+    color: black;
+}
+
+.flex-tab a:hover{
+    color: #ff8c00;
+    cursor: pointer;
+}
+
+
+.flex-logo{
+    height: 75px;
+    margin: 2.5px 10px 10px 2.5px;
+    flex-grow: 3;
+}
+

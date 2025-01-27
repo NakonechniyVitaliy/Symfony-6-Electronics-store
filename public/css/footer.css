@@ -1,9 +1,30 @@
 .footer{
     width: 100vw;
+    background: black;
+    color: white;
     height: 100px;
-    bottom: 0;
-    left: 0;
-    background: wheat;
-    text-align: center;
-    vertical-align: center;
+}
+
+.footer-items{
+    display: flex;
+    margin: auto;
+    height: 60px;
+    width: 90%;
+    justify-content: center;
+}
+
+.footer-section{
+    display: flex;
+    height: 75px;
+    flex-grow: 1;
+    margin: 2.5px 20px 2.5px 20px;
+    padding: 10px 0 10px 0;
+}
+
+.footer-items .about-company{
+    flex-grow: 1;
+}
+
+.footer-text {
+    display: block;
 }

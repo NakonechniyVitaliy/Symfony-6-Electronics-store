@@ -16,16 +16,15 @@
         {% endblock %}
     </head>
 
-    <header class="header">
-        ITS HEADER
-    </header>
+    {% include 'modules/header.html.twig' %}
 
     <body>
-        {% block body %}{% endblock %}
+        <div class="body-main-div">
+            {% block body %}{% endblock %}
+        </div>
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     </body>
 
-    <footer class="footer">
-            ITS FOOTER
-    </footer>
+    {% include 'modules/footer.html.twig' %}
+
 </html>
