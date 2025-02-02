@@ -1,21 +1,12 @@
 import './App.css'
-import data from './data.json'
+import Header from './components/Header'
 
-
-function App() {
-
-  return (
+export default function App() { return (
     <div className="App">
-        {data.map((product) => (
-            <ul key={product.id}>
-                <li>Name: {product.name}</li>
-                <li>Price: {product.price}</li>
-                <li>Category: {product.category}</li>
-                <li>Stock: {product.stock}</li>
-            </ul>
-        ))}
+        <Header />
+        <h1>HI2</h1>
     </div>
   )
 }
 
-export default App
+

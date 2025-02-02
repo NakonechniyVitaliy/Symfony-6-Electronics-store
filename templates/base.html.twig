@@ -14,17 +14,22 @@
         {% block javascripts %}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
+
+        {# Подключаем CSS через manifest.json #}
+        <link rel="stylesheet" href="{{ asset('frontend/' ~ manifestCssPath) }}">
     </head>
 
-    {% include 'modules/header.html.twig' %}
+{#    {% include 'modules/header.html.twig' %}#}
+{#    <body>#}
+{#        <div class="body-main-div">#}
+{#            {% block body %}{% endblock %}#}
+{#        </div>#}
+{#        <script src="{{ asset('js/bootstrap.min.js') }}"></script>#}
+{#    </body>#}
+{#    {% include 'modules/footer.html.twig' %}#}
 
-    <body>
-        <div class="body-main-div">
-            {% block body %}{% endblock %}
-        </div>
-        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    </body>
+    <div id="root"></div>
 
-    {% include 'modules/footer.html.twig' %}
-
+    {# Подключаем JS через manifest.json #}
+    <script type="module" src="{{ asset('frontend/' ~ manifestJsPath) }}"></script>
 </html>
