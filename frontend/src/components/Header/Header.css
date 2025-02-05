@@ -1,0 +1,41 @@
+.header{
+    width: 100vw;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: flex;
+    height: 80px;
+}
+.header-logo{
+    background: url('../../../public/img/clear-logo.png');
+    background-position: center; /* Центрирует изображение внутри div */
+    background-repeat: no-repeat; /* Отключает повтор изображения */
+    background-size: contain;
+    flex-grow: 2;
+    padding: 35px 0 10px 0;
+    height: 35px;
+}
+
+.space{
+    width: 10vw;
+}
+.header-items{
+    width: 60vw;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    display: flex;
+    align-items: center;
+}
+.header-tab{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    color: black;
+    font-weight: 475;
+    margin: 0 10px 0 10px;
+}
+
+.space{
+    text-align: center;
+    padding: 30px 0 0 0;
+}
