@@ -12,6 +12,7 @@ final class ApiManufacturerController extends AbstractController{
     #[Route('/api/manufacturer', name: 'api_manufacturer')]
     public function getManufacturers(ManufacturerRepository $manufacturerRepository)
     {
+
         return $this->json($manufacturerRepository->findAll());
     }
 }

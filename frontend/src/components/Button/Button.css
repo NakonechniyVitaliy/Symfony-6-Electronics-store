@@ -1,0 +1,17 @@
+.classic-btn{
+    background: #ff8c00;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    padding: 5px 14px 5px 14px;
+    text-decoration: none;
+}
+
+.classic-btn-second{
+    background: white;
+    border-radius: 5px;
+    border: 1px black solid;
+    color: black;
+    padding: 5px 14px 5px 14px;
+    text-decoration: none;
+}

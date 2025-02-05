@@ -3,8 +3,16 @@ import axios from "axios";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
+function ManufacturerList(props) {
+    return (
+        <tr>
+            <td>{props.id}</td>
+            <td>{props.title}</td>
+        </tr>
+    )
+}
 
-export default function Manufactures(){
+export default function Manufactures() {
     const [manufacturers, setManufacturers] = useState([]);
 
     useEffect(() => {
@@ -15,12 +23,18 @@ export default function Manufactures(){
     }, []);
 
     return (
-        <div>
-            <ul>
-                {manufacturers.map(manufacturer => (
-                    <li key={manufacturer.id}>{manufacturer.title}</li>
-                ))}
-            </ul>
-        </div>
+        <table className="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+            </tr>
+            </thead>
+            <tbody>
+                <ManufacturerList {...manufacturers[0]}/>
+                <ManufacturerList {...manufacturers[1]}/>
+                <ManufacturerList {...manufacturers[2]}/>
+            </tbody>
+        </table>
     )
 }
